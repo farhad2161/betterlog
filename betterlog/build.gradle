@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 8
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,32 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
 }
+
+
+ext {
+    bintrayRepo = 'Utility' // your repo name
+    bintrayName = 'betterlog' // has to be same as your library module name
+    publishedGroupId = 'com.kia' // your module package name
+    libraryName = 'betterlog'
+    artifact = 'betterlog' // has to be same as your library module name
+    libraryDescription = 'Easier and better way to create android log messages.'
+    siteUrl = 'https://github.com/farhad2161/betterlog'
+    gitUrl = 'https://github.com/farhad2161/betterlog.git'
+    libraryVersion = '1.0.0'
+    developerId = 'farhad2161'
+    developerName = 'Farhad K'
+    developerEmail = 'farhad2161@yahoo.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
+
+// Bintray Document
+// http://blogs.quovantis.com/how-to-publish-android-library-on-bintrayjcenter/
+// Bintray Upload command
+// gradlew clean build install bintrayUpload
