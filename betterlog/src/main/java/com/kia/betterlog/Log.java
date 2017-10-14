@@ -5,7 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 public class Log {
-    public static String frameworkTag = "";
+    private static String tag = "";
+
+    public static String getTag() {
+        return tag;
+    }
+
+    public static void setTag(String tag) {
+        Log.tag = tag;
+    }
+
     public static boolean enable = true;
 
     private static final int DEBUG = 0;
@@ -43,19 +52,19 @@ public class Log {
                         // Write log
                         switch (level) {
                             case DEBUG:
-                                android.util.Log.d(frameworkTag, message, tr);
+                                android.util.Log.d(tag, message, tr);
                                 break;
                             case INFORMATION:
-                                android.util.Log.i(frameworkTag, message, tr);
+                                android.util.Log.i(tag, message, tr);
                                 break;
                             case VERBOSE:
-                                android.util.Log.v(frameworkTag, message, tr);
+                                android.util.Log.v(tag, message, tr);
                                 break;
                             case WARNING:
-                                android.util.Log.w(frameworkTag, message, tr);
+                                android.util.Log.w(tag, message, tr);
                                 break;
                             case ERROR:
-                                android.util.Log.e(frameworkTag, message, tr);
+                                android.util.Log.e(tag, message, tr);
                                 break;
                             default:
                                 throw new Exception("Invalid level.");
@@ -74,9 +83,9 @@ public class Log {
                 }
             }
 
-            android.util.Log.e(frameworkTag, createLabel(logMethodName) + message);
+            android.util.Log.e(tag, createLabel(logMethodName) + message);
         } catch (Exception ex) {
-            android.util.Log.e(frameworkTag, createLabel(logMethodName) + "Can't log. More detail:" + ex);
+            android.util.Log.e(tag, createLabel(logMethodName) + "Can't log. More detail:" + ex);
         }
     }
 
