@@ -64,6 +64,6 @@ e/MYTAG: [com.kia.betterlogapp.MainActivity.writeDummyLog][label1][label2]I am e
 
 ### Disabling log
 ```
-Log.enable = false;
+Log.setEnable(false);
 ```
 

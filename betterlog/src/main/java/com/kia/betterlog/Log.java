@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Log {
-    private static String tag = "";
+    private static String tag = "BETTERLOG";
 
     public static String getTag() {
         return tag;
@@ -15,7 +15,15 @@ public class Log {
         Log.tag = tag;
     }
 
-    public static boolean enable = true;
+    private static boolean enable = true;
+
+    public static boolean isEnable() {
+        return enable;
+    }
+
+    public static void setEnable(boolean enable) {
+        Log.enable = enable;
+    }
 
     private static final int DEBUG = 0;
     private static final int INFORMATION = 1;
