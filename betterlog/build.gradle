@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -39,7 +39,7 @@ ext {
     libraryDescription = 'Easier and better way to create android log messages.'
     siteUrl = 'https://github.com/farhad2161/betterlog'
     gitUrl = 'https://github.com/farhad2161/betterlog.git'
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
     developerId = 'farhad2161'
     developerName = 'Farhad K'
     developerEmail = 'farhad2161@yahoo.com'
