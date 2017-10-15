@@ -10,7 +10,13 @@ Easier and better way to create log message in android.
 
 ### Usage
 
-First import it
+First add this to your gradle
+
+```
+compile 'com.kia:betterlog:1.0.0'
+```
+
+then import it to each class you want
 
 ```
 import com.kia.betterlog.Log;
