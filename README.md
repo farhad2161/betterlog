@@ -13,7 +13,7 @@ Easier and better way to create log message in android.
 First add this to your gradle
 
 ```
-compile 'com.kia:betterlog:1.0.0'
+compile 'com.kia:betterlog:1.0.1'
 ```
 
 then import it to each class you want
